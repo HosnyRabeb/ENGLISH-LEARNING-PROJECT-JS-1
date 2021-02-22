@@ -8,5 +8,5 @@ function addCourse() {
         role: "admin"
     });
     localStorage.setItem("STUDENTS", JSON.stringify(storage));
-    window.location.href = "course.html";
+    window.location.href = "index.html";
 }
