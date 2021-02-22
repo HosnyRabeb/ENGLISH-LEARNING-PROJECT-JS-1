@@ -1,4 +1,4 @@
-function logUp() {
+function signUp() {
     var FirstName = document.getElementById("recipient-name2").value;
     var LastName = document.getElementById("recipient-name3").value;
     var Email = document.getElementById("recipient-name4").value;
