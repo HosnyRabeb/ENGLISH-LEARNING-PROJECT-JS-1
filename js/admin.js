@@ -1,19 +1,19 @@
 function addCourse() {
-  var storage = JSON.parse(localStorage.getItem("COURSES")) || [];
+  let COURSE = JSON.parse(localStorage.getItem("COURSES")) || [];
   var CourseTitle = document.getElementById("CourseTitle").value;
   var Level = document.getElementById("Level").value;
   var CourseContent = document.getElementById("CourseContent").value;
   var References = document.getElementById("References").value;
   var HomeWork = document.getElementById("HomeWork").value;
 
-  storage.push({
+  COURSE.push({
     CourseTitle: CourseTitle,
     Level: Level,
     CourseContent: CourseContent,
     References: References,
     HomeWork: HomeWork,
   });
-  localStorage.setItem("COURSES", JSON.stringify(storage));
+  localStorage.setItem("COURSES", JSON.stringify(COURSE));
   window.location.href = "allcourses.html";
 }
 function updateCourse(index) {
@@ -51,7 +51,7 @@ function deleteCourse(index) {
   console.log("delete");
   let COURSE = JSON.parse(localStorage.getItem("COURSES")) || [];
   COURSE.splice(index, 1);
-  localStorage.setItem("COURSE", JSON.stringify(COURSES));
+  localStorage.setItem("COURSES", JSON.stringify(COURSE));
   displayCourse();
  
 }
@@ -63,26 +63,27 @@ function displayCourse() {
   var cols = "";
 
   COURSE.forEach((content,index) => {
-    cols += ` 
-    <div class="col-lg-4 col-md-6 mt-5">
-    <div class="card">
-        <img class="card-img-top" src="../images/image-1.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title"> Online Courses </h5>
-            <p class="card-text mb-3"> Here Is All You Need To Know About Your Online Courses .</p>
-            <a href="../html/contact.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i>
-                Join The Course</a>
-        </div>
-    </div>
-</div>
-  <button class="btn btn-info" onclick="updateCourse(${index})">
-  UPDATE COURSE
- </button>
- <button class="btn btn-danger" onclick="deleteCourse(${index})">
-  DELETE COURSE
- </button>
-</div>`;
-  });
+    cols+=`		<div class="col-lg-4 col-md-6 mt-5">
+                <div class="card">
+                  <img class="card-img-top" src="../images/image-1.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">${content.CourseTitle}</h5>
+                    <p class="card-text mb-3">${content.CourseContent}</p>
+                    <h4>${content.Level}</h4>
+                    <h3>${content.References}</h3>
+                    <p>${content.HomeWork}</p>
+                    <a href="../html/contact.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i>
+                      Join The Course</a>
+                      <button class="btn btn-info" onclick="updateCourse(${index})">
+                      UPDATE COURSE
+                     </button>
+                     <button class="btn btn-danger" onclick="deleteCourse(${index})">
+                      DELETE COURSE
+                     </button>
+                  </div>
+                </div>
+               </div>`;
+              });
 
   tcourse.innerHTML = cols;
 }
