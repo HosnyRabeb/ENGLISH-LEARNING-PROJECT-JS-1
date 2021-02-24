@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title> COURSES / PROGRAMS </title>
+	<title> COURSES/PROGRAMS </title>
 
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,9 +32,7 @@
 
 </head>
 
-<body>
-
-
+<body onload="displayCourse()">
 	<!-- header -->
 	<header>
 		<div class="container">
@@ -151,7 +149,7 @@
 
 	<!-- courses -->
 	<section class="courses py-5">
-		<div class="container py-sm-3">
+		<div class="container py-sm-3" id="tcourse">
 			<h3 class="heading text-capitalize mb-lg-5 mb-4"> Discover Our Different English Courses</span> </h3>
 			<div class="row course-grids">
 				<div class="col-lg-4 col-md-6">
@@ -197,7 +195,12 @@
 								Join The Course</a>
 						</div>
 					</div>
-				</div>
+                </div>
+                <!-- <input type="hidden" id="index" /> -->
+                <!-- <button class="btn btn-info" onclick="saveCourse()"> -->
+                    <!-- <button class="btn btn-danger" onclick="deleteCourse()"></button>
+                  DELETE THIS COURSE
+                </button> -->
 				<!-- <div class="col-lg-4 col-md-6 mt-5">
 					<div class="card">
 						<img class="card-img-top" src="../images/online-courses.jpg" alt="Card image cap">
@@ -285,8 +288,9 @@
 			<p>© 2021 LEADERS. All Rights Reserved | Designed by RUBY </p>
 		</div>
 	</footer>
-	<!-- footer -->
-	<!-- js -->
+	
+    <!-- js -->
+    <script type="text/javascript" src="../js/admin.js"></script>
 	<script type="text/javascript" src="../js/query-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
 	<!-- //js -->
