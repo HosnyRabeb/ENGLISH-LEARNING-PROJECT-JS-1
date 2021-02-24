@@ -19,11 +19,11 @@ function addCourse() {
 function updateCourse(index) {
   let COURSES = JSON.parse(localStorage.getItem("COURSES")) || [];
   let COURSE = COURSES[index];
-  document.getElementById("CourseTitle").value = COURSES.CourseTitle;
-  document.getElementById("Level").value = COURSES.Level;
-  document.getElementById("CourseContent").value = COURSES.CourseContent;
-  document.getElementById("References").value = COURSES.References;
-  document.getElementById("HomeWork").value = COURSES.HomeWork;
+  document.getElementById("CourseTitle").value = COURSE.CourseTitle;
+  document.getElementById("Level").value = COURSE.Level;
+  document.getElementById("CourseContent").value = COURSE.CourseContent;
+  document.getElementById("References").value = COURSE.References;
+  document.getElementById("HomeWork").value = COURSE.HomeWork;
   document.getElementById("index").value = index;
 }
 
@@ -43,7 +43,7 @@ function saveCourse() {
     HomeWork: HomeWork,
   };
   COURSE.splice(index, 1,updateTheCourse);
-  localStorage.setItem("COURSE", JSON.stringify(COURSES));
+  localStorage.setItem("COURSES", JSON.stringify(COURSE));
   displayCourse();
 }
 
@@ -65,19 +65,17 @@ function displayCourse() {
   COURSE.forEach((content,index) => {
     cols+=`		<div class="col-lg-4 col-md-6 mt-5">
                 <div class="card">
-                  <img class="card-img-top" src="../images/image-1.jpg" alt="Card image cap">
+                  <img class="card-img-top" src="../images/online--courses.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">${content.CourseTitle}</h5>
                     <p class="card-text mb-3">${content.CourseContent}</p>
                     <h4>${content.Level}</h4>
                     <h3>${content.References}</h3>
                     <p>${content.HomeWork}</p>
-                    <a href="../html/contact.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i>
-                      Join The Course</a>
-                      <button class="btn btn-info" onclick="updateCourse(${index})">
+                      <button class="btn btn-info mt-3" onclick="updateCourse(${index})" data-toggle="modal" data-target="#exampleModal">
                       UPDATE COURSE
                      </button>
-                     <button class="btn btn-danger" onclick="deleteCourse(${index})">
+                     <button class="btn btn-danger mt-3" onclick="deleteCourse(${index})">
                       DELETE COURSE
                      </button>
                   </div>
