@@ -32,7 +32,7 @@
 
 </head>
 
-<body onload="studentDisplayCourse()">
+<body onload="displayAllCourses()">
 
 
 	<!-- header -->
@@ -144,63 +144,7 @@
 	<section class="courses py-5">
 		<div class="container py-sm-3">
 			<h3 class="heading text-capitalize mb-lg-5 mb-4"> Discover Our Different English Courses</span> </h3>
-			<div class="row course-grids">
-				<!-- <div class="col-lg-4 col-md-6">
-					<div class="card">
-						<img class="card-img-top" src="../images/graduation.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title"> Enrollment </h5>
-							<p class="card-text mb-3">Here Is All What You Need To Know About The Enrollment's tuitions and fees.</p>
-							<a href="../html/index.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i>
-								How To Enroll </a>
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-4 col-md-6 mt-5">
-					<div class="card">
-						<img class="card-img-top" src="../images/online--courses.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title"> Online Courses </h5>
-							<p class="card-text mb-3"> Here Is All You Need To Know About Your Online Courses .</p>
-							<a href="../html/student.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i>
-								Join The Course</a>
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-4 col-md-6 mt-5">
-					<div class="card">
-						<img class="card-img-top" src="../images/planning.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title"> COURSES'SCHEDULE </h5>
-							<p class="card-text mb-3">Find Out When Your Courses Are Scheduled.</p>
-							<a href="../html/course.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i>
-							Check It Out </a>
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
-					<div class="card">
-						<img class="card-img-top" src="../images/library.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Digital Library</h5>
-							<p class="card-text mb-3">In Here You Can Find All The Booklets,Books,References,Resources And Basically Everything You Will Need.</p>
-							<a href="../html/index.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i>
-								Take A Look </a>
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-4 col-md-6 mt-5">
-					<div class="card">
-						<img class="card-img-top" src="../images/online-courses.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Online Course</h5>
-							<p class="card-text mb-3">Some quick example text to build on the card title and make up the
-								bulk of the card's content.</p>
-							<a href="../html/contact.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i>
-								Join Course</a>
-						</div>
-					</div> -->
-				</div>
+			<div class="row course-grids" id="allCourses">
 			</div>
 		</div>
 	</section>
@@ -278,7 +222,9 @@
 	</footer>
 	<!-- footer -->
 	<!-- js -->
+	<script type="text/javascript" src="../js/course.js"></script>
 	<script type="text/javascript" src="../js/student.js"></script>
+	<script type="text/javascript" src="../js/query-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../js/query-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
 	<!-- //js -->

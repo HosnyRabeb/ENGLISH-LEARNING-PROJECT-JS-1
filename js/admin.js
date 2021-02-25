@@ -7,6 +7,7 @@ function addCourse() {
   var HomeWork = document.getElementById("HomeWork").value;
 
   COURSE.push({
+    id: COURSE.length,
     CourseTitle: CourseTitle,
     Level: Level,
     CourseContent: CourseContent,
