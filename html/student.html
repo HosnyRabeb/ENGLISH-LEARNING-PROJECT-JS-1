@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title> RUBY/ ALL COURSES </title>
+	<title> LEARNERS'PAGE </title>
 
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +32,9 @@
 
 </head>
 
-<body onload="displayCourse()">
+<body onload="studentDisplayCourse()">
+
+
 	<!-- header -->
 	<header>
 		<div class="container">
@@ -121,7 +123,7 @@
 		<div class="container">
 			<div class="agileinfo-inner">
 				<h2 class="text-center text-white">
-					Courses Page
+					STUDENT'S PAGE
 				</h2>
 			</div>
 		</div>
@@ -139,59 +141,15 @@
 	<!-- //breadcrumbs -->
 
 	<!-- courses -->
-	<section class="courses py-5">
-			<div class="row course-grids" id="tcourse">	
-				</div>
+	<section class="courses py-5">	
+		<div class="container py-sm-3">
+			<h3 class="heading text-capitalize mb-lg-5 mb-4"> Discover Our Different English Courses</span> </h3>
+			<div class="row course-grids" id="tstudent">	
+		
 			</div>
 		</div>
 	</section>
 	<!-- courses -->
-
-	<!-- Button trigger modal -->  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h5 class="modal-title" id="exampleModalLabel"> THE COURSE </h5>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
-		<div class="modal-body">
-			<form action="#" method="post">
-				<div class="fields-grid">
-				  <div class="styled-input agile-styled-input-top">
-					<textarea id="CourseTitle mt-3"></textarea>
-					<label>CourseTitle</label>
-				  </div>
-				  <div class="styled-input">
-					<textarea id="Level mt-3"></textarea>
-					<label>Level</label>
-				  </div>
-				  <div class="styled-input">
-					<textarea id="CourseContent mt-3"></textarea>
-					<label>CourseContent</label>
-				  </div>
-				  <div class="styled-input">
-					<textarea id="References mt-3"></textarea>
-					<label class="text">References</label>
-				  </div>
-				</div>
-				<div class="styled-input">
-				  <textarea id="HomeWork mt-3"></textarea>
-				  <label class="text">HomeWork</label>
-				</div>
-				<input type="hidden" id="index"> 
-			  </form>
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel Update </button>
-		  <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="saveCourse()">Save The Course</button>
-		</div>
-	  </div>
-	</div>
-  </div>
 
 	<!-- footer -->
 	<footer>
@@ -263,10 +221,10 @@
 			<p>© 2021 LEADERS. All Rights Reserved | Designed by RUBY </p>
 		</div>
 	</footer>
-	
-    <!-- js -->
-    <script type="text/javascript" src="../js/admin.js"></script>
-	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+	<!-- footer -->
+	<!-- js -->
+	<script type="text/javascript" src="../js/student.js"></script>
+	<script type="text/javascript" src="../js/query-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
 	<!-- //js -->
 
