@@ -37,11 +37,13 @@ function signUp() {
   var storage = JSON.parse(localStorage.getItem("STUDENTS")) || [];
 
   storage.push({
+    id:storage.length,
     FirstName: FirstName,
     LastName: LastName,
     Email: Email,
     Password: Password,
-    role:"admin"
+    role:"student",
+    privateCourses:[]
   });
   localStorage.setItem("STUDENTS", JSON.stringify(storage));
   window.location.href = "index.html";
