@@ -34,7 +34,8 @@ function displayAllCourses(){
         connectedStudent.privateCourses.push(id);
     localStorage.setItem("UserConnected",JSON.stringify(connectedStudent));
 
-    // modification dans students
+    // MODIFICATION FOR STUDENTS //
+    
     var storage = JSON.parse(localStorage.getItem("STUDENTS")) || [];
     var indexConnected= storage.findIndex(x=> x.id==connectedStudent.id);
     storage[indexConnected].privateCourses.push(id);
