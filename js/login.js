@@ -17,7 +17,7 @@ function signIn() {
   }
   else{
     localStorage.setItem("UserConnected", JSON.stringify(connectedStudent))
-    window.location.href = "course.html";
+    window.location.href = "student.html";
   }
 }
 
