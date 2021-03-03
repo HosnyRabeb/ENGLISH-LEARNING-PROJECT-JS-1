@@ -11,7 +11,7 @@ function signUp() {
     LastName: LastName,
     Email: Email,
     Password: Password,
-    role:"student",
+    role:"admin",
     privateCourses:[]
   });
   localStorage.setItem("STUDENTS", JSON.stringify(storage));
