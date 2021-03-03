@@ -1,10 +1,10 @@
 function studentDisplayCourse() {
-      var COURSE = JSON.parse(localStorage.getItem("COURSES")) || [];
-      var tstudent = document.getElementById("tstudent");
-      var rows = "";
-    
-      COURSE.forEach((content,index) => {
-        rows+=`		<div class="col-lg-4 col-md-6 mt-5">
+	var COURSE = JSON.parse(localStorage.getItem("COURSES")) || [];
+	var tstudent = document.getElementById("tstudent");
+	var rows = "";
+
+	COURSE.forEach((content, index) => {
+		rows += `		<div class="col-lg-4 col-md-6 mt-5">
                     <div class="card">
                       <img class="card-img-top" src="../images/image-2.jpg" alt="Card image cap">
                       <div class="card-body">
@@ -61,22 +61,21 @@ function studentDisplayCourse() {
 	  </div>
 	</div>
   </div>`;
-                  });
-    
-      tstudent.innerHTML = rows;
-    }
-    function joincourses(a) {
-      var connectedStudent = JSON.parse(localStorage.getItem("UserConnected")) || {};
-     var exist = connectedStudent.privateCourses.find(x=> x== id);
-     if(exist==undefined){
-        connectedStudent.privateCourses.push(id);
-        localStorage.setItem("UserConnected",JSON.stringify(connectedStudent));
-        connectedStudent.privateCourses.push(id);
-    localStorage.setItem("UserConnected",JSON.stringify(connectedStudent));
+	});
 
-      var connectedStudent = JSON.parse(localStorage.getItem("UserConnected")) || {};
-      var indexConnected= storage.findIndex(x=> x.id==connectedStudent.id);
-      storage[indexConnected].privateCourses.push(id);
-      localStorage.setItem("STUDENTS", JSON.stringify(storage));
-    }
-    
+	tstudent.innerHTML = rows;
+}
+function joincourses(a) {
+	var connectedStudent = JSON.parse(localStorage.getItem("UserConnected")) || {};
+	var exist = connectedStudent.privateCourses.find(x => x == id);
+	if (exist == undefined) {
+		connectedStudent.privateCourses.push(id);
+		localStorage.setItem("UserConnected", JSON.stringify(connectedStudent));
+		connectedStudent.privateCourses.push(id);
+		localStorage.setItem("UserConnected", JSON.stringify(connectedStudent));
+
+		var connectedStudent = JSON.parse(localStorage.getItem("UserConnected")) || {};
+		var indexConnected = storage.findIndex(x => x.id == connectedStudent.id);
+		storage[indexConnected].privateCourses.push(id);
+		localStorage.setItem("STUDENTS", JSON.stringify(storage));
+	}
