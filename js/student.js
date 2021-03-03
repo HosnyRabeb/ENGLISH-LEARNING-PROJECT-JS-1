@@ -65,17 +65,17 @@ function studentDisplayCourse() {
 
 	tstudent.innerHTML = rows;
 }
-function joincourses(a) {
+function joincourses(id) {
 	var connectedStudent = JSON.parse(localStorage.getItem("UserConnected")) || {};
+	var storage = JSON.parse(localStorage.getItem("STUDENTS")) || [];
 	var exist = connectedStudent.privateCourses.find(x => x == id);
 	if (exist == undefined) {
 		connectedStudent.privateCourses.push(id);
 		localStorage.setItem("UserConnected", JSON.stringify(connectedStudent));
-		connectedStudent.privateCourses.push(id);
-		localStorage.setItem("UserConnected", JSON.stringify(connectedStudent));
-
+/*
 		var connectedStudent = JSON.parse(localStorage.getItem("UserConnected")) || {};
 		var indexConnected = storage.findIndex(x => x.id == connectedStudent.id);
 		storage[indexConnected].privateCourses.push(id);
-		localStorage.setItem("STUDENTS", JSON.stringify(storage));
+		localStorage.setItem("STUDENTS", JSON.stringify(storage));*/
 	}
+}

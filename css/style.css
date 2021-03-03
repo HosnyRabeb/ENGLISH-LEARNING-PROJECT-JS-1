@@ -1379,7 +1379,7 @@ p.para-w3-agile {
   transition: all 0.075s;
 }
 /*-- //input-effect --*/
-.form input[type="submit"] {
+.form input[type="button"] {
   outline: none;
   border: none;
   cursor: pointer;
@@ -1392,7 +1392,7 @@ p.para-w3-agile {
   border-radius: 4px;
   display: inline-block;
 }
-.form input[type="submit"]:hover {
+.form input[type="button"]:hover {
   background: #333;
   color: #fff;
 }

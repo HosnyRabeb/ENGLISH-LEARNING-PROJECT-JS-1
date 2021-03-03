@@ -40,7 +40,7 @@
     <!--//web font-->
   </head>
 
-  <body>
+  <body onload="isAuthentificated()">
     <!-- header -->
     <header>
       <div class="container">
@@ -247,7 +247,7 @@
           <input type="hidden" id="index" />
           <div>
             <input
-              type="submit"
+              type="button"
               class="form-control mt-2"
               onclick="addCourse()"
               value="SAVE THE COURSE"
@@ -512,6 +512,7 @@
     <!-- //Register modal -->
 
     <!-- js -->
+    <script type="text/javascript" src="../js/security.js"></script>
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/logout.js"></script>
     <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
